@@ -22,15 +22,39 @@ h1 {
 
 .column {
 	float: left;
-	width: 260px;
-	margin: 10px 20px;
+	width: 300px;
+	margin: 10px 20px 10px 0;
 }
 
 .column p {
+	position: relative;
 	margin: 10px 0;
-	padding: 6px 10px;
+	padding: 8px 36px 8px 10px;
 	background: #fff;
 	color: #333;
 	border-right: 1px solid #444;
 	border-bottom: 1px solid #444;
+	line-height: 20px;
+}
+
+a {
+	display: block;
+	width: 80px;
+	height: 18px;
+	line-height: 20px;
+	margin: 0;
+	padding: 1px 4px 3px 4px;
+	background: #888;
+	border: 1px solid #444;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	font-size: 16px;
+}
+
+.column p a {
+	width: 14px;
+	position: absolute;
+	right: 6px;
+	bottom: 6px;
 }

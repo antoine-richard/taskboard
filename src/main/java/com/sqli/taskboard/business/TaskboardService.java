@@ -48,11 +48,11 @@ public class TaskboardService {
 	 */
 	public void resetTaskboard() {
 		taskboard.drop();
-		taskboard.insert(new Task("Partir en vacances", TODO));
+		taskboard.insert(new Task("Partir en vacances, passer du bon temps et revenir avec des souvenirs plein la tête !", TODO));
 		taskboard.insert(new Task("Payer un coup à Barry", TODO));
 		taskboard.insert(new Task("Payer un coup à Julien", TODO));
 		taskboard.insert(new Task("Payer un coup à Antoine", TODO));
-		taskboard.insert(new Task("Coder un peu pour le super concours HTML5", IN_PROGRESS));
+		taskboard.insert(new Task("Coder un petit peu pour le super concours HTML5", IN_PROGRESS));
 		taskboard.insert(new Task("Assister au Kesako HTML5", DONE));
 	}
 
