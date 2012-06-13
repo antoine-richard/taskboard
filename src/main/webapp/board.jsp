@@ -10,40 +10,40 @@
 </head>
 <body>
 	<div id="content">
-		<div>
-			<form name="addForm" action="add">
-				New task: 
-				<input type="text" name="label" id="label" size="50"></input>
-				<a href="#" onclick="Taskboard.add()">Add</a>
-			</form>
-			<a href="reset">Reset</a>
-		</div>
-		<div class="column">
-			<h1>To Do</h1>
-			<c:forEach items="${todo}" var="task">
-				<p>
-					${task.label}
-					<a href="inProgress?id=${task._id}">&gt;</a>
-				</p>
-			</c:forEach>
-		</div>
-		<div class="column">
-			<h1>In Progress</h1>
-			<c:forEach items="${inProgress}" var="task">
-				<p>
-					${task.label}
-					<a href="done?id=${task._id}">&gt;</a>
-				</p>
-			</c:forEach>
-		</div>
-		<div class="column">
-			<h1>Done</h1>
-			<c:forEach items="${done}" var="task">
-				<p>
-					${task.label}
-					<a href="remove?id=${task._id}">x</a>
-				</p>
-			</c:forEach>
+		<form name="addForm" action="add">
+			<p>New task:</p>
+			<input type="text" name="label" id="label" size="50"></input>
+			<a href="#" onclick="Taskboard.add()">Add</a>
+			<a href="reset" id="reset">Reset Taskboard</a>
+		</form>
+		<div id="columns">
+			<div class="column">
+				<h1>To Do</h1>
+				<c:forEach items="${todo}" var="task">
+					<p>
+						${task.label}
+						<a href="inProgress?id=${task._id}">&gt;</a>
+					</p>
+				</c:forEach>
+			</div>
+			<div class="column">
+				<h1>In Progress</h1>
+				<c:forEach items="${inProgress}" var="task">
+					<p>
+						${task.label}
+						<a href="done?id=${task._id}">&gt;</a>
+					</p>
+				</c:forEach>
+			</div>
+			<div class="column last">
+				<h1>Done</h1>
+				<c:forEach items="${done}" var="task">
+					<p>
+						${task.label}
+						<a href="remove?id=${task._id}">x</a>
+					</p>
+				</c:forEach>
+			</div>
 		</div>
 	</div>
 </body>
