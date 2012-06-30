@@ -25,12 +25,12 @@ Pré-requis
 * MongoDB 2.0.6+
 	* Téléchargez et décompressez l'archive : http://www.mongodb.org/downloads
 	* Créez un répertoire qui contiendra votre base de données (ex : `d:\data`)
-	* Lancez votre base (se placer dans le répertoire "bin" de mongodb et taper "mongod -dbpath d:\data")
+	* Lancez votre base (se placer dans le répertoire `bin` de mongodb et taper `mongod -dbpath d:\data`)
 
 Lancement
 ---------
 
 Le projet est un projet Java construit avec Maven et incluant Jetty sous forme de plugin.
-Pour construire et lancer l'application, un simple "mvn jetty:run" suffit.
+Pour construire et lancer l'application, un simple `mvn jetty:run` suffit.
 
-Accédez à l'application en pointant le navigateur de votre choix sur l'URL http://localhost:8080/
+Accédez à l'application en pointant le navigateur de votre choix sur l'URL `http://localhost:8080/`
