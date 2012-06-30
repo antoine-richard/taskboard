@@ -1,6 +1,4 @@
-package com.sqli.taskboard.presentation;
-
-import static com.sqli.taskboard.entities.Task.IN_PROGRESS;
+package com.taskboard.presentation;
 
 import java.io.IOException;
 
@@ -10,20 +8,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.sqli.taskboard.business.TaskboardService;
+import com.taskboard.business.TaskboardService;
 
 /**
- * Servlet handling the "in progress" status
+ * Servlet handling the board reset
  */
-@WebServlet("/inProgress")
-public class TaskInProgressServlet extends HttpServlet {
+@WebServlet("/reset")
+public class ResetBoardServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Flags the task identified by the given id as "in progress"
+	 * Reset the data in the taskboard
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		TaskboardService.get().updateTaskStatus(request.getParameter("id"), IN_PROGRESS);
+		TaskboardService.get().resetTaskboard();
 		response.sendRedirect("board");
 	}
 

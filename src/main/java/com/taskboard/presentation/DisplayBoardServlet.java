@@ -1,8 +1,8 @@
-package com.sqli.taskboard.presentation;
+package com.taskboard.presentation;
 
-import static com.sqli.taskboard.entities.Task.DONE;
-import static com.sqli.taskboard.entities.Task.IN_PROGRESS;
-import static com.sqli.taskboard.entities.Task.TODO;
+import static com.taskboard.entities.Task.DONE;
+import static com.taskboard.entities.Task.IN_PROGRESS;
+import static com.taskboard.entities.Task.TODO;
 
 import java.io.IOException;
 
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.sqli.taskboard.business.TaskboardService;
+import com.taskboard.business.TaskboardService;
 
 /**
  * Servlet handling the display of the taskboard

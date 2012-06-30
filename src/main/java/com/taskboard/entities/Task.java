@@ -1,4 +1,4 @@
-package com.sqli.taskboard.entities;
+package com.taskboard.entities;
 
 import java.util.Map;
 

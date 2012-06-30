@@ -1,4 +1,4 @@
-package com.sqli.taskboard.presentation;
+package com.taskboard.presentation;
 
 import java.io.IOException;
 
@@ -8,20 +8,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.sqli.taskboard.business.TaskboardService;
+import com.taskboard.business.TaskboardService;
 
 /**
- * Servlet handling the board reset
+ * Servlet handling task removing
  */
-@WebServlet("/reset")
-public class ResetBoardServlet extends HttpServlet {
+@WebServlet("/remove")
+public class RemoveTaskServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Reset the data in the taskboard
+	 * Delete the task identified by given id
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		TaskboardService.get().resetTaskboard();
+		TaskboardService.get().remove(request.getParameter("id"));
 		response.sendRedirect("board");
 	}
 

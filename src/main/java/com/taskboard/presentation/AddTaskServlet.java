@@ -1,6 +1,4 @@
-package com.sqli.taskboard.presentation;
-
-import static com.sqli.taskboard.entities.Task.DONE;
+package com.taskboard.presentation;
 
 import java.io.IOException;
 
@@ -10,20 +8,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.sqli.taskboard.business.TaskboardService;
+import com.taskboard.business.TaskboardService;
 
 /**
- * Servlet handling the "done" status
+ * Servlet handling task removing
  */
-@WebServlet("/done")
-public class TaskDoneServlet extends HttpServlet {
+@WebServlet("/add")
+public class AddTaskServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Flags the task identified by the given id as "done"
+	 * Delete the task identified by given id
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		TaskboardService.get().updateTaskStatus(request.getParameter("id"), DONE);
+		String label = request.getParameter("label");
+		TaskboardService.get().add(label);
 		response.sendRedirect("board");
 	}
 

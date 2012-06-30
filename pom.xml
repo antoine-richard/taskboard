@@ -3,9 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.sqli</groupId>
+	<groupId>com.taskboard</groupId>
 	<artifactId>taskboard</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>war</packaging>
 	<name>Taskboard</name>
 
@@ -54,11 +54,6 @@
 	<build>
 
 		<plugins>
-
-			<!-- TODO: proposer une décompression pour les archives ZIP <plugin> <groupId>com.wenzani</groupId> 
-				<artifactId>mongodb-maven-plugin</artifactId> <version>1.0</version> <configuration> 
-				<mongoDbUrl>http://downloads.mongodb.org/win32/mongodb-win32-i386-2.0.6.zip</mongoDbUrl> 
-				<mongoDbVersion>2.0.6</mongoDbVersion> </configuration> </plugin> -->
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

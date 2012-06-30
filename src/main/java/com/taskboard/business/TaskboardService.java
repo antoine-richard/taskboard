@@ -1,8 +1,8 @@
-package com.sqli.taskboard.business;
+package com.taskboard.business;
 
-import static com.sqli.taskboard.entities.Task.TODO;
-import static com.sqli.taskboard.entities.Task.IN_PROGRESS;
-import static com.sqli.taskboard.entities.Task.DONE;
+import static com.taskboard.entities.Task.DONE;
+import static com.taskboard.entities.Task.IN_PROGRESS;
+import static com.taskboard.entities.Task.TODO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.Mongo;
-import com.sqli.taskboard.entities.Task;
+import com.taskboard.entities.Task;
 
 
 public class TaskboardService {
