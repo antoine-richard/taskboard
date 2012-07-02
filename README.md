@@ -17,12 +17,15 @@ Pré-requis
 ----------
 * JDK 6+ 
 	* Installation : http://www.oracle.com/technetwork/java/javase/downloads/index.html
+
+* Tomcat 7+
+	* Installation : http://tomcat.apache.org/download-70.cgi
 	
 * Eclipse
 	* Téléchargement : http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/junor
 	* Il s'agit d'un Web Dynamic Project Eclipse 3.7.2 ayant Tomcat 7.0 en Targeted Runtime.
 	
-* MongoDB 2.0.6+
+* MongoDB 2.0.6
 	* Téléchargez et décompressez l'archive : http://www.mongodb.org/downloads
 	* Créez un répertoire qui contiendra votre base de données (ex : `d:\data`)
 	* Lancez votre base (se placer dans le répertoire `bin` de mongodb et taper `mongod -dbpath d:\data`)
@@ -30,6 +33,6 @@ Pré-requis
 Lancement
 ---------
 
-TODO
+Exécutez l'application taskboard sur votre Tomcat préalablement créé en tant que serveur dans Eclipse.
 
 Accédez à l'application en pointant le navigateur de votre choix sur l'URL `http://localhost:8080/taskboard/`
