@@ -1,10 +1,12 @@
-package com.taskboard.entities;
+package com.taskboard.data;
 
 import java.util.Map;
 
 import com.mongodb.BasicDBObject;
 
-
+/**
+ * Entity Task
+ */
 public class Task extends BasicDBObject {
 	private static final long serialVersionUID = 1L;
 

@@ -30,7 +30,7 @@ Pré-requis
 Lancement
 ---------
 
-Le projet est un projet Java construit avec Maven et incluant Jetty sous forme de plugin.
+Le projet est un projet Java construit avec Maven et embarquant Jetty sous forme de plugin.
 Pour construire et lancer l'application, un simple `mvn jetty:run` suffit.
 
 Accédez à l'application en pointant le navigateur de votre choix sur l'URL `http://localhost:8080/`

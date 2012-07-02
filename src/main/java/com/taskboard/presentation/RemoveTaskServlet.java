@@ -18,7 +18,7 @@ public class RemoveTaskServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Delete the task identified by given id
+	 * Deletes the task identified by given id
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		TaskboardService.get().remove(request.getParameter("id"));

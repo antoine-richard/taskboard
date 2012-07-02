@@ -15,22 +15,26 @@ import com.mongodb.DBCursor;
 import com.mongodb.Mongo;
 import com.taskboard.entities.Task;
 
-
+/**
+ * Taskboard business services
+ */
 public class TaskboardService {
 
-	// Singleton
+	// Singleton stuff
 	private static TaskboardService instance = null;
 	private TaskboardService() {};
+	
+	/** Returns the unique instance */
 	public static TaskboardService get() {
 		if (instance == null) instance = new TaskboardService();
 		return instance;
 	}
 	
-	/** The collection of tasks in database */
+	/** Tasks' collection in database */
 	private DBCollection taskboard;
 
 	/**
-	 * 
+	 * Initializes the database
 	 */
 	public void initTaskboard() {
 		try {
@@ -44,7 +48,7 @@ public class TaskboardService {
 	}
 
 	/**
-	 * 
+	 * Resets the taskboard with default tasks
 	 */
 	public void resetTaskboard() {
 		taskboard.drop();
@@ -57,9 +61,9 @@ public class TaskboardService {
 	}
 
 	/**
-	 * 
+	 * Finds the tasks matching the given status
 	 * @param status
-	 * @return
+	 * @return the tasks found
 	 */
 	public List<Task> findTasksByStatus(int status) {
 		Task query = new Task();
@@ -73,15 +77,15 @@ public class TaskboardService {
 	}
 
 	/**
-	 * Create
-	 * @param label 
+	 * Creates a new task, in the "todo" status
+	 * @param label text of the task to add
 	 */
 	public void add(String label) {
 		taskboard.save(new Task(label, TODO));
 	}
 	
 	/**
-	 * Update the status of a task
+	 * Updates the status of a task
 	 * @param id id of the task
 	 * @param status the status to set
 	 */	
@@ -93,7 +97,7 @@ public class TaskboardService {
 	}
 	
 	/**
-	 * Remove the task identified by the given id
+	 * Removes the task identified by the given id
 	 * @param id id of the task
 	 */
 	public void remove(String id) {

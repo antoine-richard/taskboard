@@ -18,7 +18,7 @@ public class ResetBoardServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Reset the data in the taskboard
+	 * Resets the data in the taskboard
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		TaskboardService.get().resetTaskboard();

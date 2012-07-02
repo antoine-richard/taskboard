@@ -15,14 +15,14 @@ import javax.servlet.http.HttpServletResponse;
 import com.taskboard.business.TaskboardService;
 
 /**
- * Servlet handling the display of the taskboard
+ * Servlet handling the displaying of the taskboard
  */
 @WebServlet("/board")
 public class DisplayBoardServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 * Initializes the database at startup
 	 */
 	@Override
 	public void init() throws ServletException {
@@ -31,7 +31,7 @@ public class DisplayBoardServlet extends HttpServlet {
 	}
 
 	/**
-	 * 
+	 * Gets the tasks
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setAttribute("todo", 	   TaskboardService.get().findTasksByStatus(TODO));

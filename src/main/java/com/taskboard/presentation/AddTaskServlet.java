@@ -11,14 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 import com.taskboard.business.TaskboardService;
 
 /**
- * Servlet handling task removing
+ * Servlet handling task adding
  */
 @WebServlet("/add")
 public class AddTaskServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Delete the task identified by given id
+	 * Adds a new task with the provided label
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String label = request.getParameter("label");

@@ -12,7 +12,7 @@
 	<div id="content">
 		<form name="addForm" action="add">
 			<p>New task:</p>
-			<input type="text" name="label" id="label" size="50"></input>
+			<input type="text" name="label" id="label" size="50"/>
 			<a href="#" onclick="Taskboard.add()">Add</a>
 			<a href="reset" id="reset">Reset Taskboard</a>
 		</form>
