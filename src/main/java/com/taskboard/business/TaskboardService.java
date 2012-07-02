@@ -1,8 +1,8 @@
 package com.taskboard.business;
 
-import static com.taskboard.entities.Task.DONE;
-import static com.taskboard.entities.Task.IN_PROGRESS;
-import static com.taskboard.entities.Task.TODO;
+import static com.taskboard.data.Task.DONE;
+import static com.taskboard.data.Task.IN_PROGRESS;
+import static com.taskboard.data.Task.TODO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.Mongo;
-import com.taskboard.entities.Task;
+import com.taskboard.data.Task;
 
 /**
  * Taskboard business services

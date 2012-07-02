@@ -5,7 +5,7 @@ Ce dépôt abrite l'application servant de support au concours HTML5 Nantes.
 
 Deux branches sont disponibles :
 
-* La branche `maven-branch` porte l'application au format Maven
+* La branche `maven-branch` porte l'application au format Maven [branche courante]
 * La branche `eclipse-branch` porte l'application dans un projet Eclipse
 
 Basculez sur celle qui vous convient le mieux.
@@ -22,7 +22,7 @@ Pré-requis
 	* Téléchargement : http://maven.apache.org/download.html
 	* Instructions : http://maven.apache.org/download.html#Installation_Instructions
 	
-* MongoDB 2.0.6+
+* MongoDB 2.0.6
 	* Téléchargez et décompressez l'archive : http://www.mongodb.org/downloads
 	* Créez un répertoire qui contiendra votre base de données (ex : `d:\data`)
 	* Lancez votre base (se placer dans le répertoire `bin` de mongodb et taper `mongod -dbpath d:\data`)
