@@ -1,8 +1,8 @@
 package com.taskboard.presentation;
 
-import static com.taskboard.entities.Task.DONE;
-import static com.taskboard.entities.Task.IN_PROGRESS;
-import static com.taskboard.entities.Task.TODO;
+import static com.taskboard.data.Task.DONE;
+import static com.taskboard.data.Task.IN_PROGRESS;
+import static com.taskboard.data.Task.TODO;
 
 import java.io.IOException;
 

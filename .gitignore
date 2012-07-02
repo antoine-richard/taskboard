@@ -1,6 +1,1 @@
-# Ignore all dotfiles...
-.*
-# except for .gitignore
-!.gitignore
-
-target
+build

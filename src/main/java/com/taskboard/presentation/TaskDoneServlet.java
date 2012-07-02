@@ -1,6 +1,6 @@
 package com.taskboard.presentation;
 
-import static com.taskboard.entities.Task.DONE;
+import static com.taskboard.data.Task.DONE;
 
 import java.io.IOException;
 

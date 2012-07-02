@@ -6,21 +6,21 @@ Ce dépôt abrite l'application servant de support au concours HTML5 Nantes.
 Deux branches sont disponibles :
 
 * La branche `maven-branch` porte l'application au format Maven
-* La branche `eclipse-branch` porte l'application dans un projet Eclipse
+* La branche `eclipse-branch` porte l'application dans un projet Eclipse [branche courante]
 
 Basculez sur celle qui vous convient le mieux.
 
-Lancer l'application Taskboard avec Maven
-=================================================
+Lancer l'application Taskboard avec Eclipse
+===========================================
 
 Pré-requis
 ----------
 * JDK 6+ 
 	* Installation : http://www.oracle.com/technetwork/java/javase/downloads/index.html
 	
-* Maven 3+
-	* Téléchargement : http://maven.apache.org/download.html
-	* Instructions : http://maven.apache.org/download.html#Installation_Instructions
+* Eclipse
+	* Téléchargement : http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/junor
+	* Il s'agit d'un Web Dynamic Project Eclipse 3.7.2 ayant Tomcat 7.0 en Targeted Runtime.
 	
 * MongoDB 2.0.6+
 	* Téléchargez et décompressez l'archive : http://www.mongodb.org/downloads
@@ -30,7 +30,6 @@ Pré-requis
 Lancement
 ---------
 
-Le projet est un projet Java construit avec Maven et embarquant Jetty sous forme de plugin.
-Pour construire et lancer l'application, un simple `mvn jetty:run` suffit.
+TODO
 
-Accédez à l'application en pointant le navigateur de votre choix sur l'URL `http://localhost:8080/`
+Accédez à l'application en pointant le navigateur de votre choix sur l'URL `http://localhost:8080/taskboard/`

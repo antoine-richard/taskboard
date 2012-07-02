@@ -1,6 +1,6 @@
 package com.taskboard.presentation;
 
-import static com.taskboard.entities.Task.IN_PROGRESS;
+import static com.taskboard.data.Task.IN_PROGRESS;
 
 import java.io.IOException;
 
