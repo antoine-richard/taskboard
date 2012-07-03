@@ -11,7 +11,7 @@ Deux branches sont disponibles :
 Basculez sur celle qui vous convient le mieux.
 
 Lancer l'application Taskboard avec Maven
-=================================================
+=========================================
 
 Pré-requis
 ----------
@@ -33,4 +33,4 @@ Lancement
 Le projet est un projet Java construit avec Maven et embarquant Jetty sous forme de plugin.
 Pour construire et lancer l'application, un simple `mvn jetty:run` suffit.
 
-Accédez à l'application en pointant le navigateur de votre choix sur l'URL `http://localhost:8080/`
+Accédez à l'application en pointant le navigateur de votre choix sur l'URL `http://localhost:8080/`.
