@@ -12,34 +12,27 @@ import de.flapdoodle.embedmongo.distribution.Version;
 import de.flapdoodle.embedmongo.runtime.Network;
 
 @WebListener
-// @WebServlet(loadOnStartup = 0)
-public class MongoServer implements ServletContextListener /*
-															 * extends
-															 * HttpServlet
-															 */{
+public class MongoServer implements ServletContextListener {
 
 	private static final int PORT = 27017;
 
-	private MongodProcess mongod = null;
-
+	private MongodProcess mongod;
 	private MongodExecutable executable;
 
 	@Override
-	public void contextInitialized(ServletContextEvent arg0) {
+	public void contextInitialized(ServletContextEvent sce) {
 		onStart();
 	}
 
 	@Override
-	public void contextDestroyed(ServletContextEvent arg0) {
+	public void contextDestroyed(ServletContextEvent sce) {
 		onStop();
 	}
 
 	private void onStart() {
 		MongoDBRuntime runtime = MongoDBRuntime.getDefaultInstance();
-
 		try {
-			executable = runtime.prepare(new MongodConfig(Version.V2_0_4, PORT,
-					Network.localhostIsIPv6()));
+			executable = runtime.prepare(new MongodConfig(Version.V2_0_5, PORT, Network.localhostIsIPv6()));
 			mongod = executable.start();
 		} catch (Exception e) {
 			throw new RuntimeException(e.getMessage(), e);
@@ -52,19 +45,5 @@ public class MongoServer implements ServletContextListener /*
 			executable.cleanup();
 		}
 	}
-
-	// @Override
-	// public void init() throws ServletException {
-	// super.init();
-	//
-	// onStart();
-	// }
-	//
-	// @Override
-	// public void destroy() {
-	//
-	// onStop();
-	//
-	// super.destroy();
-	// }
+	
 }
